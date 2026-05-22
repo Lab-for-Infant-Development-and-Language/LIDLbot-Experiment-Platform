@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>External</title>
+  <link rel="stylesheet" href="/static/css/web_content_embed.css">
+</head>
+<body>
+  <div id="iframe-container" style="{{ embed_style or 'flex: 1;' }}">
+    <iframe src="{{ url }}" id="main-iframe"></iframe>
+  </div>
+
+  <div id="controls">
+    <span id="timer" class="hidden"></span>
+    <span id="msg" class="hidden">Finish this section, then proceed.</span>
+    <button id="next-button" class="hidden">Next</button>
+  </div>
+
+  <script>
+    const nextUrl = '{{ next_url }}';
+    const buttonRevealTimeout = {{ button_reveal_timeout | tojson }};
+    const autoAdvanceTimeout = {{ auto_advance_timeout | tojson }};
+  </script>
+  <script src="/static/js/web_content_embed.js"></script>
+</body>
+</html>

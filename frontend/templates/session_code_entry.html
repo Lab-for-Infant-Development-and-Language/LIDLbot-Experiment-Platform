@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Entry</title>  
+    <link rel='stylesheet' href='/static/css/library/fontawesome.all.min.css' />
+    <link rel='stylesheet' href='/static/css/library/googlefonts.roboto.css' />
+    <link rel='stylesheet' href='/static/css/library/mdb.min.css' />
+    <link rel='stylesheet' href='/static/css/session_code_entry.css'>
+  </head>
+  <body>
+    <h1>Enter session code</h1>
+    <div class='container-xl py-5' style='max-width: 500px;'>
+      <div class='row d-flex justify-content-center'>
+        <div class='col-lg-8'>
+          <div class='card' style='border-radius: 15px; overflow: hidden'>
+            <div class='card-header d-flex p-3 bg-info text-white border-bottom-0'>
+              <p class='mb-0 fw-bold'>Please enter the session code:</p>
+            </div>
+            <div class='card-body'>
+              <div class='input-group mb-0' style='max-width: 250px;'>
+                <input type='text' class='form-control' id='session-code-input' placeholder='Enter session code' maxlength='15ch' required>
+                <button class='btn btn-primary' style='padding-top: .55rem;' id='submit-button'>
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const code = '{{ code }}';
+      const nextUrl = '{{ next_url }}'
+    </script>
+    <script src='/static/js/session_code_entry.js'></script>
+  </body>
+</html>

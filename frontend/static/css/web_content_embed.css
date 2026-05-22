@@ -1,0 +1,44 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+#timer, #msg {
+  margin-right: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#next-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ bot_name | default(LIDLbot) }}</title>
+    <link rel="stylesheet" href="/static/css/voicebot.css">
+  </head>
+  <body>
+    <div id="main-mic">
+      <img src="/static/assets/images/loader.png" id="loader" class="loader-hidden">
+      <span id="mic-text">Ready!</span>
+      <img id="mic-icon" src="/static/assets/images/mic.png">
+    </div>
+    
+    <div id="tutorial">
+      <h2 id="tutorial-text">Press and hold SPACE to activate {{ bot_name | default(LIDLbot) }}.</h2>
+      <img src="/static/assets/images/space.jpg" id="space-icon">
+    </div>
+    
+    <script src="/static/js/library/FileSaver.min.js"></script>
+    <script>
+      const trials = {{ trials | tojson }}; 
+      const nextUrl = '{{ next_url }}';
+      const minWords = {{ min_words }};
+      let trialIndex = {{ trial_index }};
+    </script>
+    <script src="/static/js/voicebot.js"></script>
+  </body>
+</html>

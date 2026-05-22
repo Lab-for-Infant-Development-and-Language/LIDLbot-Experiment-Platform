@@ -1,0 +1,23 @@
+:root {
+    /* Background Color */
+    --background-color-dark-primary: #262626;
+    --background-color-dark-secondary: #1B1C1C;
+    --background-color-light-primary: #F8F8FA;
+    --background-color-light-secondary: #FFFFFF;
+    /* Text Color */
+    --text-color-dark-primary: #FEFFFE;
+    --text-color-dark-secondary: #6E6F6F;
+    --text-color-dark-tertiary: #8F8F8F;
+    --text-color-light-primary: #000000;
+    --text-color-light-secondary: #606162;
+    /* Form Elements Color */
+    --form-elements-color-light-primary: #CECECE;
+    --form-elements-color-light-selected: #606162;
+    --form-elements-color-light-hover: #F8F8FA;
+    /* Accent Color */
+    --accent-color-light-primary: #CD3232;
+    --accent-color-light-secondary: #be2e2e;
+    /* Transition Animation Time */
+    --transition-time: 0.2s; 
+    --transition-time-short: 0.1s;
+}

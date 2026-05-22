@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Prompter</title>
+    <link rel="stylesheet" href="/static/css/session_code_display.css" />
+  </head>
+  <body> 
+    <h1>Please enter this code into the assistant:</h1>
+    {% if code %}
+    <p id="session-code">{{ code }}</p>
+    {% else %}
+    <p>Error code not passed</p>
+    {% endif %}
+    <button class="hidden" id="next-button">Next</button>
+    <script>
+      const nextUrl = "{{ next_url }}";
+    </script>
+    <script src="/static/js/session_code_display.js"></script>
+  </body>
+</html>

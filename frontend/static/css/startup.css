@@ -1,0 +1,88 @@
+#participant-id{
+    width: 100px;
+}
+
+.form-control {
+    border: none; 
+    border-bottom: 1px solid #ced4da;
+    border-radius: 0;
+    box-shadow: none; 
+    width: 100%; 
+    padding: 0.5rem 0; 
+    font-size: 1rem;
+    background-color: transparent;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control:focus {
+    border-color: #3953ff;
+    outline: 1;
+    box-shadow: none;
+}
+.form-control:focus ~ .form-label,
+.form-control:not(:placeholder-shown) ~ .form-label {
+    font-size: 0.75rem;
+    top: -0.25rem;
+    color: #007bff;
+}
+#sona-id {
+  width: 9%;
+}
+
+.form-check {
+  display: inline-block;
+}
+
+.form-check-input {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.form-check-label {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.additional-info {
+  float: right;
+  position: relative;
+}
+
+.participant-info {
+  float: left;
+}
+
+.small-textbox {
+  width: 250px;
+  height: 30px;
+  margin-right: 700px;
+}
+
+.textbox {
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    resize: vertical;
+    overflow: auto;
+}
+
+.stats {
+    width: 200px;
+    height: auto;
+    margin-right: 900px;
+    margin-bottom: 10px;
+}
+
+.stats-minor {
+  width: 200px;
+  height: auto;
+  margin-right: 900px;
+  margin-bottom: 10px;
+  font-size: smaller;
+}
+
+.short-divider {
+  width: 20%;
+  border: 1px solid #ccc;
+}

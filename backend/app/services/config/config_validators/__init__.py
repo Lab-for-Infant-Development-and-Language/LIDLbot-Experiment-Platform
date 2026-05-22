@@ -1,0 +1,5 @@
+from .blocks_config_validator import validate_blocks_config
+from .experiment_config_validator import validate_experiment_config
+from .modules_config_validator import validate_modules_config
+from .sets_config_validator import validate_sets_config
+from .trials_config_validator import validate_trials_config

@@ -1,0 +1,302 @@
+:root {
+    --input-height: 34px;
+    --input-border-width: 1px;
+    --input-horizontal-padding: 11px;
+    --input-vertical-padding: 8px;
+    --card-select-width: 150px;
+    --card-select-padding-top: 20px;
+    --card-select-padding-bottom: 15px;
+    --select-arrow-size: 4px;
+    --radio-width: 12px;
+    --radio-inner-width: 8px;
+    --radio-border-width: 1.5px;
+    --checkmark-width: 1.5px;
+    --start-button-width: 116px;
+    --start-button-height: 38px;
+}
+
+fieldset {
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.form-element-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--extra-small-spacing);
+}
+
+.form-element-container legend {
+    padding-bottom: var(--text-spacing-secondary);
+}
+
+.radio-container,
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.card-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: var(--card-select-padding-top);
+    padding-bottom: var(--card-select-padding-bottom);
+    width: var(--card-select-width);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio-container input,
+.card-select input,
+.checkbox-container input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    cursor: pointer; 
+}
+
+.radio-container .h6,
+.checkbox-container .h6 {
+    flex: 1;
+    padding-left: calc(
+        var(--radio-border-width)
+        + var(--radio-width)
+        + var(--radio-border-width)
+        + var(--extra-small-spacing)
+    );
+    color: var(--text-color-light-secondary);
+    cursor: pointer;
+}
+
+.card-select label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--text-spacing-primary);
+    align-items: center;
+    text-align: center; 
+    z-index: 2;
+    color: var(--text-color-light-secondary);
+    cursor: pointer; 
+}
+
+.card-select .card-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--background-color-light-secondary);
+    border: var(--input-border-width) solid var(--form-elements-color-light-primary);
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-time-short) ease, border-color var(--transition-time-short) ease;
+    z-index: 1;
+    cursor: pointer; 
+}
+
+.card-select:hover .card-radio {
+    background-color: var(--form-elements-color-light-hover);
+}
+
+input[type="radio"]:checked ~ .card-radio {
+    background-color: var(--form-elements-color-light-hover);
+    border-color: var(--form-elements-color-light-selected);
+}
+
+.radio-container .radio {
+    position: absolute;
+    top: calc(50% - ((var(--radio-width) / 2) + var(--radio-border-width)));
+    left: 0;
+    height: var(--radio-width);
+    width: var(--radio-width);
+    border-radius: var(--radio-width);
+    border: var(--radio-border-width) solid var(--form-elements-color-light-primary);
+    cursor: pointer;
+    transition: background-color var(--transition-time) ease, border-color var(--transition-time) ease;
+}
+
+.radio-container:hover input ~ .radio {
+    border-color: var(--form-elements-color-light-primary);
+}
+
+.radio-container input:checked ~ .radio {
+    border-color: var(--accent-color-light-primary);
+}
+
+.radio-container .radio:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: calc(50% - (var(--radio-inner-width) / 2));
+    left: calc(50% - (var(--radio-inner-width) / 2));
+    width: var(--radio-inner-width);
+    height: var(--radio-inner-width);
+    border-radius: calc(var(--radio-inner-width) / 2);
+    background-color: var(--background-color-light-secondary);
+    transition: background-color var(--transition-time) ease;
+}
+
+.radio-container:hover input ~ .radio:after {
+    background-color: var(--form-elements-color-light-primary);
+}
+
+.radio-container input:checked ~ .radio:after {
+    display: block;
+    background-color: var(--accent-color-light-primary);
+}
+
+.checkbox-container .checkbox {
+    position: absolute;
+    top: calc(50% - ((var(--radio-width) / 2) + var(--radio-border-width)));
+    left: 0;
+    height: var(--radio-width);
+    width: var(--radio-width);
+    border-radius: var(--border-radius);
+    border: var(--radio-border-width) solid var(--form-elements-color-light-primary);
+    cursor: pointer;
+    transition: background-color var(--transition-time) ease, border-color var(--transition-time) ease;
+}
+
+.checkbox-container:hover .checkbox {
+    background-color: var(--form-elements-color-light-primary);
+}
+
+.checkbox-container input:checked ~ .checkbox {
+    background-color: var(--accent-color-light-primary);
+    border-color: var(--accent-color-light-primary);
+}
+
+.checkbox:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: calc(50% - ((var(--radio-width) / 8) + (var(--checkmark-width) / 2)));
+    top: calc(42% - ((var(--radio-width) / 4) + (var(--checkmark-width) / 2)));
+    width: calc(var(--radio-width) / 4);
+    height: calc(var(--radio-width) / 2);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border: solid var(--background-color-light-secondary);
+    border-width: 0 var(--checkmark-width) var(--checkmark-width) 0;
+    transition: border-color var(--transition-time) ease;
+}
+
+.card-select-container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--small-spacing);
+}
+
+.select-container {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+.select-container::before,
+.select-container::after {
+    --arrow-position: 34%;
+    content: "";
+    position: absolute;
+    right: var(--input-horizontal-padding);
+    border-left: var(--select-arrow-size) solid transparent;
+    border-right: var(--select-arrow-size) solid transparent;
+    pointer-events: none;
+}
+
+.select-container::before {
+    border-bottom: var(--select-arrow-size) solid var(--text-color-light-secondary);
+    top: var(--arrow-position);
+}
+
+.select-container::after {
+    border-top: var(--select-arrow-size) solid var(--text-color-light-secondary);
+    bottom: var(--arrow-position);
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    flex: 1;
+    /* WARN: Do remove, do not replace with height: var(--input-height)
+     *   - Setting height for input requires min-height and max-height (height alone is insufficient)
+     *   - Setting height is required for select, otherwise refreshing the page will change
+     *     the height of select (this is caused by hiding the default dropdown arrow)
+     */
+    min-height: var(--input-height);
+    max-height: var(--input-height);
+    padding-left: var(--input-horizontal-padding);
+    padding-right: var(--input-horizontal-padding);
+    padding-top: var(--input-vertical-padding);
+    padding-bottom: var(--input-vertical-padding);
+    box-sizing: border-box;
+    border: var(--input-border-width) solid var(--form-elements-color-light-primary);
+    border-radius: var(--border-radius);
+    color: var(--text-color-light-secondary);
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+h6[type="field"],
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+    color: var(--text-color-light-secondary);
+}
+
+select {
+    cursor: pointer;
+}
+
+.required-asterisk {
+    display: inline-block;
+    color: var(--background-color-light-secondary);
+    transition: color var(--transition-time) ease;
+}
+
+.required-asterisk[data-display="true"] {
+    color: var(--accent-color-light-primary);
+}
+
+.start-button {
+    align-items: center;
+    justify-content: center;
+    width: var(--start-button-width);
+    height: var(--start-button-height);
+    border-radius: var(--border-radius);
+    border: none;
+    outline: none;
+    background-color: var(--accent-color-light-primary);
+    transition: background-color var(--transition-time) ease;
+    cursor: pointer;
+    color: var(--background-color-light-secondary)
+}
+
+.start-button[data-disabled="false"]:hover,
+.start-button[data-disabled="false"]:active,
+.start-button[data-disabled="false"]:hover:active {
+    background-color: var(--accent-color-light-secondary);
+}
+
+.start-button[data-disabled="true"] {
+    background-color: var(--form-elements-color-light-primary);
+    cursor: not-allowed;
+}

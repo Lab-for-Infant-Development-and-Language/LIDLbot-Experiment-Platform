@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "LIDLbot"
+version = "1.0"
+description = "A Python-based experiment platform for psychological or linguistic experiments on conversational user interface interactions."
+authors = []
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.14"
+numpy = "^1.26.4"
+numba = "^0.59.1"
+flask = "^3.0.3"
+scipy = "^1.14.0"
+pyinstaller = "^6.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

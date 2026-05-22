@@ -1,0 +1,2 @@
+from .modules_config_normalizer import normalize_modules_config
+from .trials_config_normalizer import normalize_trials_config

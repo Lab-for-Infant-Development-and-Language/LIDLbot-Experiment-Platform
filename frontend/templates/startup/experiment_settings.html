@@ -1,0 +1,168 @@
+<!-- [TAB] Experiment Settings -->
+<div id="experiment-settings" class="tab-content">
+  <form class="experiment-settings-content" id="experiment-settings-form" action="/session/settings" method="post"
+    onsubmit="return handleStartButtonClick(event)">
+    <div class="content">
+      <h2>Experiment Settings: 
+        <span style="color: var(--text-color-light-secondary);">{{experiment_name}}</span>
+      </h2>
+      <div class="content-body">
+        <div class="experiment-settings-main-block">
+          <!-- [CARD] Participant Stats -->
+          <div class="content-card-container experiment-settings-content-card-container-secondary">
+            <h5>Participant Stats</h5>
+            <div class="content-card">
+              <div class="experiment-settings-content-card-column-primary">
+                <!-- [FIELD] Last Used Participant ID -->
+                <div class="form-element-container">
+                  <label class="h6" for="last-used-participant-id">Last Used Participant ID</label>
+                  <h6 type="field" id="last-used-participant-id" name="last-used-participant-id">
+                    ---</span>
+                </div>
+                <!-- [FIELD] Next Participant ID -->
+                <div class="form-element-container">
+                  <label class="h6" for="next-participant-id">Next Participant ID</label>
+                  <h6 type="field" id="next-participant-id" name="next-participant-id">---</span>
+                </div>
+                <!-- [FIELD] Total Participant Counts per Condition and Order -->
+                <div class="form-element-container">
+                  <label class="h6" for="total-participant-counts">Total Participant Counts</label>
+                  <h6 type="field" id="total-participant-counts" name="total-participant-counts">
+                    ---</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [CARD] Participant Info -->
+          <div class="content-card-container experiment-settings-content-card-container-primary">
+            <h5>Participant Info</h5>
+            <div class="content-card">
+              <div class="experiment-settings-content-card-column-primary">
+                <!-- [INPUT] Participant ID -->
+                <div class="form-element-container">
+                  <label class="h6" for="participant-id" data-required>
+                    Participant ID
+                    <span class="medium required-asterisk" id="participant-id-warning" data-display="false">*</span>
+                  </label>
+                  <input class="h6" type="number" id="participant-id" name="participant-id"
+                    placeholder="Enter Participant ID">
+                </div>
+                <!-- [INPUT] SONA/Paid ID -->
+                <div class="form-element-container">
+                  <label class="h6" for="sona-paid-id">
+                    SONA/Paid ID
+                    <span class="medium required-asterisk" data-display="false">*</span>
+                  </label>
+                  <input class="h6" type="number" id="sona-paid-id" name="sona-paid-id"
+                    placeholder="Enter SONA/Paid ID">
+                </div>
+                <!-- [DROPDOWN] Counterbalance Order -->
+                <div class="form-element-container">
+                  <label class="h6" for="counterbalance-order" data-required>
+                    Set
+                    <span class="medium required-asterisk" data-display="false">*</span>
+                  </label>
+                  <div class="select-container">
+                    <select class="h6" id="counterbalance-order" name="counterbalance-order">
+                      {% for set_name in set_names %}
+                      <option value="{{set_name}}">{{set_name}}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="experiment-settings-content-card-column-secondary">
+                <!-- [RADIO] Source -->
+                <fieldset class="form-element-container">
+                  <legend class="h6" for="source" data-required>
+                    Source
+                    <span class="medium required-asterisk" data-display="false">*</span>
+                  </legend>
+                  <div class="radio-container">
+                    <input type="radio" name="source" value="SONA" id="sona" checked>
+                    <label class="radio" for="sona"></label>
+                    <label class="h6" for="sona">SONA</label>
+                  </div>
+                  <div class="radio-container">
+                    <input type="radio" name="source" value="Paid" id="paid">
+                    <label class="radio" for="paid"></label>
+                    <label class="h6" for="paid">Paid</label>
+                  </div>
+                </fieldset>
+                <!-- [RADIO] Condition -->
+                <fieldset class="form-element-container">
+                  <legend class="h6" for="condition" data-required>
+                    Condition
+                    <span class="medium required-asterisk" data-display="false">*</span>
+                  </legend>
+                  <div class="radio-container">
+                    <input type="radio" name="condition" value="M" id="m" checked>
+                    <label class="radio" for="m"></label>
+                    <label class="h6" for="m">M</label>
+                  </div>
+                  <div class="radio-container">
+                    <input type="radio" name="condition" value="L" id="l">
+                    <label class="radio" for="l"></label>
+                    <label class="h6" for="l">L</label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <!-- [CARD] App Settings -->
+          <div class="content-card-container experiment-settings-content-card-container-primary">
+            <h5>App Settings</h5>
+            <div class="content-card">
+              <div class="experiment-settings-content-card-column-primary">
+                <!-- [RADIO] Screen Selection -->
+                <fieldset class="form-element-container">
+                  <legend class="h6" for="screen-selection" data-required>
+                    Screen Selection
+                    <span class="medium required-asterisk" data-display="false">*</span>
+                  </legend>
+                  <div class="card-select-container">
+                    <div class="card-select">
+                      <input type="radio" name="screen-selection" value="assistant" id="assistant" checked>
+                      <label class="card-radio" for="assistant"></label>
+                      <label for="assistant">
+                        <img src="/static/assets/images/assistant_icon.png" style="width: 70px" />
+                        <h6>Assistant</h6>
+                      </label>
+                    </div>
+                    <div class="card-select">
+                      <input type="radio" name="screen-selection" value="study" id="study">
+                      <label class="card-radio" for="study"></label>
+                      <label for="study">
+                        <img src="/static/assets/images/prompter_icon.png" style="width: 70px" />
+                        <h6>Study</h6>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+                <!-- [CHECKBOX] Testing Modes -->
+                <fieldset class="form-element-container">
+                  <legend class="h6">Testing Modes</legend>
+                  <!-- Dry Run -->
+                  <div class="checkbox-container">
+                    <input type="checkbox" type="checkbox" value="" name="dry-run" id="dry-run">
+                    <label class="checkbox" for="dry-run"></label>
+                    <label class="h6" for="dry-run">Dry Run (don't save data)</label>
+                  </div>
+                  <!-- Bypass ID Restrictions -->
+                  <div class="checkbox-container">
+                    <input type="checkbox" type="checkbox" value="" name="bypass-id-restrictions"
+                      id="bypass-id-restrictions">
+                    <label class="checkbox" for="bypass-id-restrictions"></label>
+                    <label class="h6" for="bypass-id-restrictions">Bypass ID Restrictions</label>
+                  </div>
+                </fieldset>
+                <button type="submit" class="start-button bold" id='experiment-settings-start-button'
+                  data-disabled="false">START</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

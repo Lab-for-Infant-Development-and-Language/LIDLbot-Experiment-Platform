@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Editor</title>
+    <link rel="stylesheet" href="/static/css/startup/color_palette.css">
+    <link rel="stylesheet" href="/static/css/startup/fonts.css">
+    <link rel="stylesheet" href="/static/css/startup/base.css">
+    <link rel="stylesheet" href="/static/css/startup/form_elements.css">
+    <link rel="stylesheet" href="/static/css/startup/experiment_settings.css">
+    <script src="/static/js/startup.js"></script>
+    <script src="/static/js/papaparse.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <ul class="navigation-list">
+        <li>
+          <a href="#experiment-settings" class="tab" data-tab="experiment-settings" active>
+            <div class="icon" id="experiment-settings-icon"></div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Main Content -->
+    <main>
+      {% include "startup/experiment_settings.html" %}
+    </main>
+  </body>
+</html>

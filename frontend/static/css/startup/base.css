@@ -1,0 +1,58 @@
+:root {
+    --border-radius: 3.5px;
+    --content-horizontal-padding: 39px;
+    --content-vertical-padding: 28px;
+    --content-body-margin-top: 56px;
+    --text-spacing-primary: 14px;
+    --text-spacing-secondary: 7px;
+    --large-spacing: 28px;
+    --medium-spacing: 21px;
+    --small-spacing: 14px;
+    --extra-small-spacing: 7px;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-light-primary);
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: var(--content-horizontal-padding);
+    padding-right: var(--content-horizontal-padding);
+    padding-top: var(--content-vertical-padding);
+    padding-bottom: var(--content-vertical-padding);
+}
+
+.content-body {
+    display: flex;
+    flex: 1;
+    margin-top: var(--content-body-margin-top);
+}
+
+.content-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--text-spacing-primary);
+}
+
+.content-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--small-spacing) var(--large-spacing);
+    padding: var(--medium-spacing);
+    border-radius: var(--border-radius);
+    background-color: var(--background-color-light-secondary);
+    box-shadow: 0px 0.5px 3.5px rgba(0, 0, 0, 0.1);
+}

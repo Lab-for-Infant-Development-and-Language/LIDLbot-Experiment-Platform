@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 100 900;
+    font-style: normal;
+    font-optical-sizing: auto;
+    src: url("/static/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+    --font-size-h2: 43px;
+    --font-size-h5: 17px;
+    --font-size-h6: 14px;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2, .h2 {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-light);
+}
+
+h5, .h5 {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-regular);
+}
+
+h6, .h6 {
+    font-size: var(--font-size-h6);
+    font-weight: var(--font-weight-regular);
+}
+
+.light {
+    font-weight: var(--font-weight-light);
+}
+
+.regular {
+    font-weight: var(--font-weight-regular);
+}
+
+.medium {
+    font-weight: var(--font-weight-medium);
+}
+
+.bold {
+    font-weight: var(--font-weight-bold);
+}

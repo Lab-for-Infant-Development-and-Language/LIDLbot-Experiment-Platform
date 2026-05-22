@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions</title>
+    <link rel='stylesheet' href='/static/css/content_viewer.css' />
+  </head>
+  <body>
+    <div id='content-container'>
+      <p id='text-display'></p>
+      <img id='image-display' class='hidden' />
+    </div>
+    <div id='button-container'>
+      <button id='prev-button' disabled>Previous</button>
+      <button id='next-button'>Next</button>
+    </div>
+    <script>
+      const contents = {{ contents | tojson }};
+      const nextUrl = '{{ next_url }}';
+    </script>
+    <script src='/static/js/content_viewer.js'></script>
+  </body>
+</html>

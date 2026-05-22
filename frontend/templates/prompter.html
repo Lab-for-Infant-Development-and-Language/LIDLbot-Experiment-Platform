@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompter</title>
+    <link rel='stylesheet' href='/static/css/prompter.css' />
+  </head>
+  <body>
+    <div id='prompt-container'>
+      <p id='text-display'>Click next to start.</p>
+      <img id='image-display' class='hidden' />
+    </div>
+    <div id='button-container'>
+      <button id='next-button'>Next</button>
+    </div>
+    <script>
+      const trials = {{ trials | tojson }}; 
+      const nextUrl = '{{ next_url }}';
+      const sonaId = '{{sona_id}}';
+      const participantId = '{{participant_id}}';
+      let trialIndex = {{ trial_index }};
+    </script>
+    <script src='/static/js/prompter.js'></script>
+  </body>
+</html>

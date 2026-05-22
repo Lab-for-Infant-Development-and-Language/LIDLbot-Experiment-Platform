@@ -1,0 +1,42 @@
+:root {
+    --experiment-settings-content-card-container-primary-max-width: 450px;
+    --experiment-settings-content-card-container-secondary-max-width: 300px;
+}
+
+.experiment-settings-content {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.experiment-settings-main-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--medium-spacing);
+    flex: 1;
+}
+
+.experiment-settings-content-card-container-primary {
+    flex: 3;
+    max-width: var(--experiment-settings-content-card-container-primary-max-width);
+}
+
+.experiment-settings-content-card-container-secondary {
+    flex: 2;
+    max-width: var(--experiment-settings-content-card-container-secondary-max-width);
+}
+
+.experiment-settings-content-card-column-primary,
+.experiment-settings-content-card-column-secondary {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small-spacing);
+}
+
+.experiment-settings-content-card-column-primary {
+    flex: 2;
+}
+
+.experiment-settings-content-card-column-secondary {
+    flex: 1;
+}
