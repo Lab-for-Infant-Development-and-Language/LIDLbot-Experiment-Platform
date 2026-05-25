@@ -1,7 +1,28 @@
-# Environment Setup
-The following document describes the necessary steps to set up the program source code.
+## Table of Contents
+- [Environment Setup](#Environment-Setup)
+  - [Hardware Prerequisites](#Hardware-Prerequisites)
+  - [Software Prerequisites](#Software-Prerequisites)
+  - [Initialize Back-end Environment](#Initialize-Back-end-Environment)
 
-## **Hardware Prerequisites**
+- [Configuration](#Configuration)
+  - [Experiment Configuration](#Experiment-Configuration)
+  - [Set and Sequence Configuration](#Set-and-Sequence-Configuration)
+  - [Module Configuration](#Module-Configuration)
+  - [Block Configuration](#Block-Configuration)
+  - [Trial Configuration](#Trial-Configuration)
+
+- [Startup](#Startup)
+    - [Session Setup](#Session-Setup)
+      - [Participant Stats](#Participant-Stats)
+      - [Participant Info](#Participant-Info)
+      - [App Settings](#App-Settings)
+      - [Launch Procedure](#Launch-Procedure)
+ 
+
+# Environment Setup
+The following section describes the necessary steps to set up the program source code.
+
+## Hardware Prerequisites
 
 - Two independent computers, minimum 4 GB of RAM, and 500 MB of free storage.
 
