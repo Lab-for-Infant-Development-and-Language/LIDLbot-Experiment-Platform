@@ -42,7 +42,11 @@ The following section describes the necessary steps to set up the program source
 1. Open a terminal in the project root folder.
 2. `cd backend` 
 3. `poetry env activate`
-4. `poetry install` (Note that `poetry install` is only required for the first time to install dependencies.)
+4. `poetry install`
+
+Notes: 
+- `poetry install` is only required for the first time to install dependencies.)
+- If `poetry env activate` does not work, you will need to update poetry with `poetry self update`.
 
 
 # Experiment Configuration
