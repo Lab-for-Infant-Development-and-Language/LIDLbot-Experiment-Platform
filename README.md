@@ -1,4 +1,4 @@
-## Table of Contents
+# Table of Contents
 - [Environment Setup](#Environment-Setup)
   - [Hardware Prerequisites](#Hardware-Prerequisites)
   - [Software Prerequisites](#Software-Prerequisites)
