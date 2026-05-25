@@ -26,35 +26,23 @@ In LIDLbot, experiments are configured via an experiment folder. On program laun
 
 The expected structure of the configuration folder is described below.
 
+```
 experiment_root/
-
 ├── participant_data/
-
 │   ├── responses/
-
 │   │   ├── voice/
-
 │   │   └── chat/
-
 │   ├── data.csv
-
 │   └── participant.csv
-
 ├── resources/
-
 │   ├── assets/
-
 │   └── configuration/
-
 │       ├── experiment_config.json
-
 │       ├── sets_sequences_config.json
-
 │       ├── modules_config.json
-
 │       ├── blocks_config.json
-
 │       └── trials_config/
+```
 
 
 
