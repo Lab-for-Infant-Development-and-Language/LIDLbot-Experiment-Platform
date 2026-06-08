@@ -42,15 +42,12 @@ The following section describes the necessary steps to set up the program source
 1. Open a terminal in the project root folder.
 2. `cd backend` 
 3. `poetry env activate`
-<<<<<<< HEAD
 4. `poetry install` (Note that `poetry install` is only required for the first time to install dependencies.)
-=======
 4. `poetry install`
 
 Notes: 
 - `poetry install` is only required for the first time to install dependencies.)
 - If `poetry env activate` does not work, you will need to update poetry with `poetry self update`.
->>>>>>> a4e1f174a77f879927ecea7b2a63ecdac7b8256e
 
 
 # Experiment Configuration
@@ -260,11 +257,7 @@ Each trial must also define a response, the “type” may either be text or aud
 1. Open a terminal in the project root folder.
 2. `cd backend` 
 3. `poetry env activate`
-<<<<<<< HEAD
 4. `poetry run python run.py`
-=======
-4. `poetry run python app.py`
->>>>>>> a4e1f174a77f879927ecea7b2a63ecdac7b8256e
 5. A file selection dialog will open. Select the experiment configuration folder. A successful validation looksl ike the code below.
     - The contents of the folder (configuration files and assets) will be validated. Validation logs are available in the console.
     - Should validation fail or should the user fail to select a folder, LIDLbot will terminate.
