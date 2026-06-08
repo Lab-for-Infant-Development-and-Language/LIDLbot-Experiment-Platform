@@ -34,7 +34,7 @@ The following section describes the necessary steps to set up the program source
 
 - Windows or MacOS
 - Google Chrome
-- Python (3.11 or later)
+- Python 3.11 
 - Python Poetry (https://python-poetry.org/docs/)
 
 ## Initialize Back-end Environment
